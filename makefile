@@ -18,5 +18,4 @@ test:
 	@docker run -it --rm  bryandollery/probe
 
 save:
-	@git commit -am "Release version $(VERSION). $$(commit "$$(git diff --staged)")"
-	@git push
+	@exec ./commit.sh
